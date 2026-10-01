@@ -28,11 +28,12 @@ jobs:
       - name: Build Web Assets
         run: npx vite build
 
-      - name: Add Android Platform
-        run: npx cap add android
-
-      - name: Sync Capacitor
-        run: npx cap sync android
+      - name: Sync Capacitor Android
+        run: |
+          if [ ! -d "android" ]; then
+            npx cap add android
+          fi
+          npx cap sync android
 
       - name: Build Debug APK
         run: |

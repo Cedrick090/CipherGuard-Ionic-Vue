@@ -1,0 +1,5 @@
+"use strict";(self["webpackChunkcipherguard"]=self["webpackChunkcipherguard"]||[]).push([[335],{335(e,t,i){var s=i(52);
+/*!
+ * (C) Ionic http://ionicframework.com - MIT License
+ */const a="ionKeyboardDidShow",o="ionKeyboardDidHide";let h={},d={},n=!1;const r=e=>{if(s.K.getEngine())g(e);else{if(!e.visualViewport)return;d=k(e.visualViewport),e.visualViewport.onresize=()=>{b(e),c()||u(e)?p(e):w(e)&&f(e)}}},g=e=>{e.addEventListener("keyboardDidShow",t=>p(e,t)),e.addEventListener("keyboardDidHide",()=>f(e))},p=(e,t)=>{l(e,t),n=!0},f=e=>{v(e),n=!1},c=()=>!n&&h.width===d.width&&(h.height-d.height)*d.scale>150,u=e=>n&&!w(e),w=e=>n&&d.height===e.innerHeight,l=(e,t)=>{const i=new CustomEvent(a,{detail:{keyboardHeight:t?t.keyboardHeight:e.innerHeight-d.height}});e.dispatchEvent(i)},v=e=>{const t=new CustomEvent(o);e.dispatchEvent(t)},b=e=>{h=Object.assign({},d),d=k(e.visualViewport)},k=e=>({width:Math.round(e.width),height:Math.round(e.height),offsetTop:e.offsetTop,offsetLeft:e.offsetLeft,pageTop:e.pageTop,pageLeft:e.pageLeft,scale:e.scale});i.d(t,["startKeyboardAssist",0,r])}}]);
+//# sourceMappingURL=335.6b707e77.js.map
